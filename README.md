@@ -61,4 +61,22 @@ The Binance WebSocket stream provides live, push-based data.
 Every time a tracked asset changes (e.g., price, 24h %), Binance sends an update.
 
 
+git clone https://github.com/SanthoshKumar49451/crypro-tracker.git
+cd crypro-tracker
+
+Setup Instructions
+Clone the repo
+git clone https://github.com/SanthoshKumar49451/crypro-tracker.git
+cd crypro-tracker
+Install dependencies
+npm install
+Start development server
+npm run dev
+Build for production
+
+
+
+Thought Process
+Focused on building a clean, real-time dashboard experience that mirrors professional crypto platforms like Binance and CoinMarketCap. State is centralized and performant via Redux selectors, and Tailwind ensures a fast, responsive UI layout.
+npm run build
 
