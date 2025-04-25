@@ -1,12 +1,64 @@
-# React + Vite
+ Real-Time Crypto Dashboard:
+A responsive cryptocurrency dashboard built with React, Redux Toolkit, Vite, Tailwind CSS, and Binance WebSocket API. Displays real-time price and volume updates for major crypto assets like BTC, ETH, ADA, and more.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+ Live Demo:
+ https://crypro-tracker-five.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ View the real-time dashboard in action!
 
-## Expanding the ESLint configuration
+FEATURES:
+Real-Time Price Updates via Binance WebSocket
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Crypto Table UI:
+
+Logos
+
+Live Price
+
+% Changes (1h, 24h, 7d)
+
+Market Cap
+
+24h Volume
+
+Circulating Supply
+
+Static 7D Chart (SVG)
+
+ Color-coded % change (green for positive, red for negative)
+
+ State managed with Redux Toolkit
+
+ Fully responsive with Tailwind CSS
+
+
+Tool	Purpose:
+React-UI framework
+Redux-Toolkit	Centralized state management
+Vite-Lightning-fast build tool
+Tailwind CSS-Utility-first responsive design
+WebSocket (Binance)-Live price/volume updates
+
+WebSocket Integration:
+Connects to Binance’s ticker stream:
+
+bash
+Copy
+Edit
+wss://stream.binance.com:9443/stream?streams=btcusdt@ticker/ethusdt@ticker/
+Parses and dispatches:
+
+price
+
+24h % change
+
+24h volume
+
+ Why setInterval is unnecessary:
+The Binance WebSocket stream provides live, push-based data.
+
+Every time a tracked asset changes (e.g., price, 24h %), Binance sends an update.
+
+
+
